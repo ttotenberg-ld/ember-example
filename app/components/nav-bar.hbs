@@ -9,5 +9,10 @@
     <LinkTo @route="contact" class="menu-contact">
       Contact
     </LinkTo>
+    <li class="nav-item">
+      <button type="button" class="nav-link" {{on "click" @sendError}}>
+        Send Test Error
+      </button>
+    </li>
   </div>
 </nav>

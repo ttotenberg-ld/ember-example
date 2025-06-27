@@ -1,7 +1,7 @@
 import Service from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import { initialize } from 'launchdarkly-js-client-sdk';
-import Observability from "@launchdarkly/observability";
+import Observability, { LDObserve } from "@launchdarkly/observability";
 import SessionReplay from "@launchdarkly/session-replay";
 import config from 'super-rentals/config/environment';
 
@@ -70,5 +70,9 @@ export default class LaunchDarklyService extends Service {
     this.flags;
 
     return this.client.variationDetail(flagKey, defaultValue);
+  }
+
+  error(error, message) {
+    LDObserve.recordError(error, message);
   }
 } 
