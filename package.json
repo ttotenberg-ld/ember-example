@@ -81,5 +81,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "launchdarkly-js-client-sdk": "^3.8.1"
   }
 }
