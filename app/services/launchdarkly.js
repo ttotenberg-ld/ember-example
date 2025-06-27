@@ -1,6 +1,8 @@
 import Service from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import { initialize } from 'launchdarkly-js-client-sdk';
+import Observability from "@launchdarkly/observability";
+import SessionReplay from "@launchdarkly/session-replay";
 import config from 'super-rentals/config/environment';
 
 export default class LaunchDarklyService extends Service {
@@ -16,10 +18,20 @@ export default class LaunchDarklyService extends Service {
   initialize() {
     const context = {
       kind: 'user',
-      key: 'context-key-123abc',
+      key: 'context-key-123abcde',
     };
 
-    this.client = initialize(config.APP.launchDarklyClientSideId, context);
+    this.client = initialize(config.APP.launchDarklyClientSideId, context, {
+      plugins: [ new Observability({
+        tracingOrigins: true,
+        networkRecording: {
+          enabled: true,
+          recordHeadersAndBody: true
+        }
+      }), new SessionReplay({
+        privacySetting: 'none',
+      }) ]
+    });
 
     this.client.on('ready', () => {
       this.flags = this.client.allFlags();

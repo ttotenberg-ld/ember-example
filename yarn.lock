@@ -1550,6 +1550,39 @@
   dependencies:
     buffer "^6.0.3"
 
+"@launchdarkly/js-client-sdk-common@1.13.0":
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/@launchdarkly/js-client-sdk-common/-/js-client-sdk-common-1.13.0.tgz#51a10732bb742c2ea4e1d60f7071a30f9ce17b77"
+  integrity sha512-3u3nWLKfu7ADbrBlbYq1rDROXG1WcRGRGhHFyAjtDPCCh783sPIb1frC1n4tj6b64bustVrZvLR9dGrQlp6tJQ==
+  dependencies:
+    "@launchdarkly/js-sdk-common" "2.17.0"
+
+"@launchdarkly/js-client-sdk@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@launchdarkly/js-client-sdk/-/js-client-sdk-0.6.0.tgz#a127c5e57b9f77356b19bff540404c71eb33ed16"
+  integrity sha512-9aBgpGKXxaiPudNuQ9MoS8wFSIR1h0P2EFDP2veNJG7tBuxzDKfH3hzjW01C4/WyWN6bk7P7XKwisxw775klBQ==
+  dependencies:
+    "@launchdarkly/js-client-sdk-common" "1.13.0"
+
+"@launchdarkly/js-sdk-common@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/@launchdarkly/js-sdk-common/-/js-sdk-common-2.17.0.tgz#963978fc1d64f7166e72928c101805a3899b0142"
+  integrity sha512-HYQNc4xbE58hBOO1yZsqE+BHOC36AYrHPZ5hwvlHoZRSsaoYCPM+Q/n+O+N3JhWXTqGsu6SwUzqUzTyxg8prGg==
+
+"@launchdarkly/observability@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@launchdarkly/observability/-/observability-0.3.1.tgz#bad7257a721028331522d3f978373115cc10ab9e"
+  integrity sha512-qXm5cfoT0ywrq/tpJoSi3rmqCLbzKyH3nEoVKY+DI2mF9omIBCyAK2GALHonaQYySV6M60eII5nZU/SE/0xEHw==
+  dependencies:
+    highlight.run "9.18.18"
+
+"@launchdarkly/session-replay@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@launchdarkly/session-replay/-/session-replay-0.3.1.tgz#26baa89362a84499a0f67bc1d012447d0d0f0b7e"
+  integrity sha512-S1ZQIdLnfnZ7D7dil9vL84V93kXlnZ5MwL57m+xdx9HEj0re+2b7jM0GEKRP8hehoHZKExjBy4Nl3TikFts2GQ==
+  dependencies:
+    highlight.run "9.18.18"
+
 "@lint-todo/utils@^13.1.1":
   version "13.1.1"
   resolved "https://registry.yarnpkg.com/@lint-todo/utils/-/utils-13.1.1.tgz#5c054d61ee037b9e552add118264771122cc1166"
@@ -6156,6 +6189,13 @@ heimdalljs@^0.2.0, heimdalljs@^0.2.1, heimdalljs@^0.2.3, heimdalljs@^0.2.5, heim
   integrity sha512-o9bd30+5vLBvBtzCPwwGqpry2+n0Hi6H1+qwt6y+0kwRHGGF8TFIhJPmnuM0xO97zaKrDZMwO/V56fAnn8m/tA==
   dependencies:
     rsvp "~3.2.1"
+
+highlight.run@9.18.18:
+  version "9.18.18"
+  resolved "https://registry.yarnpkg.com/highlight.run/-/highlight.run-9.18.18.tgz#ce3a2c1a9d472b7d899227f2cba0fc4c82d45945"
+  integrity sha512-TdLyum9TNfQ6IrPYLCybb6dAXyXawjiigZCqPvtL9rEdkuCHH8/6owhfc5U17NZftn9fFnP5gApvOfssEszhoQ==
+  dependencies:
+    "@launchdarkly/js-client-sdk" "^0.6.0"
 
 homedir-polyfill@^1.0.1:
   version "1.0.3"

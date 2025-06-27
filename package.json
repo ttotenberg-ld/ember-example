@@ -83,6 +83,8 @@
     "edition": "octane"
   },
   "dependencies": {
+    "@launchdarkly/observability": "^0.3.1",
+    "@launchdarkly/session-replay": "^0.3.1",
     "launchdarkly-js-client-sdk": "^3.8.1"
   }
 }
